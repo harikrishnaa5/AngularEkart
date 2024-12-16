@@ -1,0 +1,39 @@
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 2rem; 
+    padding: 3rem 4rem;
+    justify-content: space-around;
+}
+
+.product-container {
+    flex: 1 1 1 15rem; 
+    max-width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+button {
+  padding: 5px 10px;
+  font-size: 18px;
+  margin: 5px 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    }
+}

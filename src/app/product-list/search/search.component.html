@@ -1,0 +1,14 @@
+<div class="product-search">
+  <input
+    type="text"
+    class="product-search-input"
+    [value]="searchText"
+    [(ngModel)]="searchText"
+  />
+  <span><button class="btn-search">Search</button></span>
+</div>
+<div class="search-display">
+  <p>
+    <strong>Search result for: {{ searchText }}</strong>
+  </p>
+</div>
