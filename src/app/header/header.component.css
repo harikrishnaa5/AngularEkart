@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 5rem;
+  padding: 0.8rem 5rem;
   font-size: 1.2rem;
   border-bottom: 1px solid #dcd9d9;
 }
-.header > ul {
+.menu-list {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -15,11 +15,11 @@
 a {
   text-decoration: none;
   color: #4c4646;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 3px;
   transition: 0.3s;
 }
-.header > ul > li > a:hover {
+.menu-list > a:hover {
   background-color: #e3f37a;
 }
 .search-bar {

@@ -1,0 +1,9 @@
+<div class="product-grid">
+  <!-- products -->
+  <div class="product-container" *ngFor="let prod of products">
+    <img [src]="prod.imageURL" alt="product" />
+    <p>{{ prod.name }}</p>
+    <p>${{ prod.price }}</p>
+    <p>{{ prod.gender }} . {{ prod.category }} . {{ prod.brand }}</p>
+  </div>
+</div>
