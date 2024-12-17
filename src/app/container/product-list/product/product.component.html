@@ -1,0 +1,29 @@
+<div class="product-container">
+  <div class="add-to-wishlist">
+    <i class="fa-solid fa-heart"></i>
+  </div>
+  <img [src]="product.imageURL" alt="product" />
+  <p class="product-name">{{ product.name }}</p>
+  <p>{{ product.gender }} . {{ product.category }} . {{ product.brand }}</p>
+  <span class="price-wrap"
+    ><p *ngIf="product.discountPrice" class="discount-price">
+      ${{ product.discountPrice }}
+    </p>
+    <p *ngIf="product.discountPrice" class="original-price">
+      ${{ product.price }}
+    </p>
+    <p *ngIf="!product.discountPrice" class="discount-price">
+      ${{ product.price }}
+    </p></span
+  >
+  <p
+    [ngStyle]="{
+      fontWeight: 'bold',
+      color: product.is_in_inventory ? 'Green' : 'Red'
+    }"
+  >
+    {{
+      product.is_in_inventory ? "Available in stock" : "Not available in stock"
+    }}
+  </p>
+</div>

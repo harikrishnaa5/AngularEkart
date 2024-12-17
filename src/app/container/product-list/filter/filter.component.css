@@ -1,0 +1,10 @@
+.filter-container {
+  margin-top: 20px;
+  padding: 0px 26vh;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
