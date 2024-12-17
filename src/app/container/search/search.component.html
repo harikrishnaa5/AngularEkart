@@ -5,10 +5,19 @@
     [value]="searchText"
     [(ngModel)]="searchText"
   />
-  <span><button class="btn-search">Search</button></span>
+  <span
+    ><button
+      [ngClass]="{
+        'btn-search': searchText,
+        'btn-search-disabled': !searchText
+      }"
+    >
+      Search
+    </button></span
+  >
 </div>
 <div class="search-display">
-  <p>
+  <p *ngIf="searchText !== ''">
     <strong>Search result for: {{ searchText }}</strong>
   </p>
 </div>

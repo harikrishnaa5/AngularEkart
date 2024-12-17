@@ -1,9 +1,30 @@
 <div class="product-grid">
   <!-- products -->
   <div class="product-container" *ngFor="let prod of products">
+    <div class="add-to-wishlist">
+      <i class="fa-solid fa-heart"></i>
+    </div>
     <img [src]="prod.imageURL" alt="product" />
-    <p>{{ prod.name }}</p>
-    <p>${{ prod.price }}</p>
+    <p class="product-name">{{ prod.name }}</p>
     <p>{{ prod.gender }} . {{ prod.category }} . {{ prod.brand }}</p>
+    <span class="price-wrap"
+      ><p *ngIf="prod.discountPrice" class="discount-price">
+        ${{ prod.discountPrice }}
+      </p>
+      <p *ngIf="prod.discountPrice" class="original-price">${{ prod.price }}</p>
+      <p *ngIf="!prod.discountPrice" class="discount-price">
+        ${{ prod.price }}
+      </p></span
+    >
+    <p
+      [ngStyle]="{
+        fontWeight: 'bold',
+        color: prod.is_in_inventory ? 'Green' : 'Red'
+      }"
+    >
+      {{
+        prod.is_in_inventory ? "Available in stock" : "Not available in stock"
+      }}
+    </p>
   </div>
 </div>
