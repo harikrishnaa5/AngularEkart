@@ -29,4 +29,8 @@ export class ContainerComponent {
   //     ++this.addToCart
   // }
   fruits: string[] = ['orange', 'mango', 'apple', 'banana']
+  searchText: string = ''
+  searchTextChangeEvent(value: string){
+    this.searchText = value
+  }
 }

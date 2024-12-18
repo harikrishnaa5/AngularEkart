@@ -2,15 +2,12 @@
   <input
     type="text"
     class="product-search-input"
-    [value]="searchText"
-    [(ngModel)]="searchText"
+    #inputSearch
   />
   <span
     ><button
-      [ngClass]="{
-        'btn-search': searchText,
-        'btn-search-disabled': !searchText
-      }"
+      class="btn-search"
+      (click)="onInputChange(inputSearch)"
     >
       Search
     </button></span

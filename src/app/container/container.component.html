@@ -1,5 +1,5 @@
 <!-- <div class="product-grid"> -->
-  <div class="container">
+<div class="container">
   <!-- product-1 -->
   <!-- <div class="product-container">
     <img [src]="product.pImage" alt="product" />
@@ -80,6 +80,10 @@
       <button (click)="increment()">+</button>
     </div>
   </div> -->
-  <search></search>
-  <app-product-list></app-product-list>
+  <search (searchTextChanged)="searchTextChangeEvent($event)"></search>
+  <app-product-list
+    [searchInputText]="searchText"
+    #selectedProduct
+  ></app-product-list>
+  <product-detail *ngIf="selectedProduct.selectedProduct"></product-detail>
 </div>

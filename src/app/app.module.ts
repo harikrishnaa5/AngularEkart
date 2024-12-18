@@ -11,6 +11,7 @@ import { ProductListComponent } from './container/product-list/product-list.comp
 import { ProductComponent } from './container/product-list/product/product.component';
 import { FilterComponent } from './container/product-list/filter/filter.component';
 import { ButtonComponent } from './container/product-list/button/button.component';
+import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ButtonComponent } from './container/product-list/button/button.componen
     ProductComponent,
     FilterComponent,
     ButtonComponent,
+    ProductDetailComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

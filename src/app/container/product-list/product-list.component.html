@@ -4,15 +4,19 @@
   [outOfStock]="outOfStockItems"
   (selectedFilterRadioButtonChanged)="onFilterChange($event)"
 ></app-filter>
-<app-button (isButtonClicked)="onButtonClickEvent($event)"></app-button>
-<div><p>{{message}}</p></div>
+<!-- <app-button (isButtonClicked)="onButtonClickEvent($event)"></app-button>
+<div><p>{{message}}</p></div> -->
 <div class="product-grid">
-  <div *ngFor="let prod of products">
+  <!-- *ngIf="
+        selectedFilterRadioButton === 'all' ||
+        prod.is_in_inventory.toString() === selectedFilterRadioButton
+      " -->
+  <div *ngFor="let prod of products" (click)="selectedProduct = prod">
     <app-product
       [product]="prod"
       *ngIf="
-        selectedFilterRadioButton === 'all' ||
-        prod.is_in_inventory.toString() === selectedFilterRadioButton
+        searchInputText === '' ||
+        prod.name.toLowerCase().includes(searchInputText)
       "
     ></app-product>
   </div>
