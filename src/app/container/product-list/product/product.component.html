@@ -4,7 +4,7 @@
   </div>
   <img [src]="product.imageURL" alt="product" />
   <p class="product-name">{{ product.name }}</p>
-  <p>{{ product.gender }} . {{ product.category }} . {{ product.brand }}</p>
+  <p>{{ product.gender }} . {{ product.brand }} . {{ product.category }}</p>
   <span class="price-wrap"
     ><p *ngIf="product.discountPrice" class="discount-price">
       ${{ product.discountPrice }}

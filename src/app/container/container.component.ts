@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'container',
@@ -28,7 +29,9 @@ export class ContainerComponent {
   //   if(this.product.inStock > this.addToCart)
   //     ++this.addToCart
   // }
-  fruits: string[] = ['orange', 'mango', 'apple', 'banana']
+  // fruits: string[] = ['orange', 'mango', 'apple', 'banana']
+  @ViewChild(ProductListComponent) productListComponent: ProductListComponent
+
   searchText: string = ''
   searchTextChangeEvent(value: string){
     this.searchText = value

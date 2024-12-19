@@ -85,5 +85,5 @@
     [searchInputText]="searchText"
     #selectedProduct
   ></app-product-list>
-  <product-detail *ngIf="selectedProduct.selectedProduct"></product-detail>
+  <product-detail *ngIf="selectedProduct.selectedProduct" [productListComp]="productListComponent"></product-detail>
 </div>
