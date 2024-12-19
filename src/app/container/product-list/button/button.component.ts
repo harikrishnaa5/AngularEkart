@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { AlertComponent } from './alert/alert.component';
+import { AlertTwoComponent } from './alert-two/alert-two.component';
 
 @Component({
   selector: 'app-button',
@@ -12,9 +13,11 @@ export class ButtonComponent {
   
   
   @ViewChild(AlertComponent) alertComponent: AlertComponent
+  @ViewChild(AlertTwoComponent) alertTwoComponent: AlertTwoComponent
 
   onButtonClick() {
-    // this.isButtonClicked.emit(this.buttonClicked);
-    alert(this.alertComponent.alertMessage)
+    let message = this.alertComponent.alertMessage
+    this.alertTwoComponent.alertTwoMessage = message
+    this.alertTwoComponent.showAlert()
   }
 }

@@ -13,6 +13,7 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
 import { ButtonComponent } from './container/product-list/button/button.component';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import { AlertComponent } from './container/product-list/button/alert/alert.component';
+import { AlertTwoComponent } from './container/product-list/button/alert-two/alert-two.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AlertComponent } from './container/product-list/button/alert/alert.comp
     ButtonComponent,
     ProductDetailComponent,
     AlertComponent,
+    AlertTwoComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
