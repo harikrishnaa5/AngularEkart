@@ -7,7 +7,6 @@ import { AlertComponent } from './alert/alert.component';
   styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent {
-  buttonClicked: string = 'button is clicked';
   @Output()
   isButtonClicked: EventEmitter<any> = new EventEmitter<any>();
   
@@ -16,6 +15,6 @@ export class ButtonComponent {
 
   onButtonClick() {
     // this.isButtonClicked.emit(this.buttonClicked);
-    this.alertComponent.showAlert()
+    alert(this.alertComponent.alertMessage)
   }
 }

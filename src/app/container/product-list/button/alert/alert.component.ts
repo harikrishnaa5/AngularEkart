@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent {
-  showAlert() {
-    alert("Button is clicked")
-  }
+  alertMessage: string = "Button is clicked"
 }
