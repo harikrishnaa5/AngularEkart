@@ -14,4 +14,9 @@ export class ContainerComponent {
   searchTextChangeEvent(value: string){
     this.searchText = value
   }
+
+  toggle: boolean = false
+  onToggle() {
+    this.toggle = !this.toggle
+  }
 }

@@ -81,6 +81,13 @@
     </div>
   </div> -->
   <search (searchTextChanged)="searchTextChangeEvent($event)"></search>
+  <ng-container *ngIf="toggle; else toggleOff">
+    <h2>Toggle is On</h2>
+  </ng-container>
+  <ng-template #toggleOff>
+    <h2>Toggle is Off</h2>
+  </ng-template>
+  <button style="width: 100px;" (click)="onToggle()">click me</button>
   <app-product-list
     [searchInputText]="searchText"
     #selectedProduct

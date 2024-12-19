@@ -6,13 +6,16 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  @ViewChildren('inputEl') inputElement : QueryList<ElementRef>
-  fullName: string = ''
-  show() {
-    this.inputElement.forEach(el => {
-      this.fullName += el.nativeElement.value + " "
-    })
-    this.fullName.trim()
+  // @ViewChildren('inputEl') inputElement : QueryList<ElementRef>
+  // fullName: string = ''
+  // show() {
+  //   this.inputElement.forEach(el => {
+  //     this.fullName += el.nativeElement.value + " "
+  //   })
+  //   this.fullName.trim()
+  // }
+  toggle: boolean = false
+  onToggle() {
+    this.toggle = !this.toggle
   }
-  
 }
