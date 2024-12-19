@@ -4,8 +4,11 @@
   [outOfStock]="outOfStockItems"
   (selectedFilterRadioButtonChanged)="onFilterChange($event)"
 ></app-filter>
-<!-- <app-button (isButtonClicked)="onButtonClickEvent($event)"></app-button>
-<div><p>{{message}}</p></div> -->
+
+
+<app-button (isButtonClicked)="onButtonClickEvent($event)"></app-button>
+
+
 <div class="product-grid">
   <!-- *ngIf="
         selectedFilterRadioButton === 'all' ||
