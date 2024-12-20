@@ -3,4 +3,13 @@
 <app-header></app-header>
 <container></container> -->
 <!-- <app-form></app-form> -->
-<app-parent></app-parent>
+<!-- <app-parent></app-parent> -->
+<div class="container">
+  <div class="demo-wrap">
+    <div class="input-wrap">
+      <input type="text" #inputEl />
+      <button (click)="onButtonClicked(inputEl)">Submit</button>
+    </div>
+    <app-demo [message]="inputVal"></app-demo>
+  </div>
+</div>

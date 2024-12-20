@@ -19,6 +19,7 @@ import { FeaturedBrandsComponent } from './container/featured-brands/featured-br
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { TestComponent } from './test/test.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TestComponent } from './test/test.component';
     ParentComponent,
     ChildComponent,
     TestComponent,
+    DemoComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
