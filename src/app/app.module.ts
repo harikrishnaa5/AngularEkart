@@ -15,6 +15,7 @@ import { ProductDetailComponent } from './container/product-detail/product-detai
 import { AlertComponent } from './container/product-list/button/alert/alert.component';
 import { AlertTwoComponent } from './container/product-list/button/alert-two/alert-two.component';
 import { FormComponent } from './form/form.component';
+import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FormComponent } from './form/form.component';
     AlertComponent,
     AlertTwoComponent,
     FormComponent,
+    FeaturedBrandsComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

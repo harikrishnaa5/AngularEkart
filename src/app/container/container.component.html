@@ -81,16 +81,33 @@
     </div>
   </div> -->
   <search (searchTextChanged)="searchTextChangeEvent($event)"></search>
-  <ng-container *ngIf="toggle; else toggleOff">
+  <!-- <ng-container *ngIf="toggle; else toggleOff">
     <h2>Toggle is On</h2>
   </ng-container>
   <ng-template #toggleOff>
     <h2>Toggle is Off</h2>
   </ng-template>
-  <button style="width: 100px;" (click)="onToggle()">click me</button>
+  <button style="width: 100px;" (click)="onToggle()">click me</button> -->
   <app-product-list
     [searchInputText]="searchText"
     #selectedProduct
   ></app-product-list>
   <product-detail *ngIf="selectedProduct.selectedProduct" [productListComp]="productListComponent"></product-detail>
+  <div class="featured-products">
+    <div class="featured-products-heading">
+      <h3>NEW ARRIVALS</h3>
+    </div>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Nike</h3>
+      <button class="call-to-action">New Arrivals in Nike</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Puma</h3>
+      <button class="call-to-action">New Arrivals in Puma</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Adidas</h3>
+      <button class="call-to-action">New Arrivals in Adidas</button>
+    </featured-brands>
+  </div>
 </div>

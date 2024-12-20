@@ -1,0 +1,21 @@
+.featured-products-item {
+  width: 300px;
+  margin: 10px;
+  padding: 20px 30px;
+  background-color: white;
+  gap: 2rem;
+}
+
+.title,
+.description,
+.call-to-action {
+  margin: 10px 0;
+}
+
+.call-to-action {
+  background: #232323;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+}
