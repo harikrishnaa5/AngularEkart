@@ -16,6 +16,9 @@ import { AlertComponent } from './container/product-list/button/alert/alert.comp
 import { AlertTwoComponent } from './container/product-list/button/alert-two/alert-two.component';
 import { FormComponent } from './form/form.component';
 import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { FeaturedBrandsComponent } from './container/featured-brands/featured-br
     AlertTwoComponent,
     FormComponent,
     FeaturedBrandsComponent,
+    ParentComponent,
+    ChildComponent,
+    TestComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
