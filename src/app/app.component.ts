@@ -8,17 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-ekart';
   inputVal: string = '';
+  toDestroy: boolean = false
   constructor() {
     console.log('This is the constructor of AppComponent');
   }
 
-  ngAfterViewInit() {
-    // console.log("ngAfterViewInit of App component")
+  // ngAfterViewInit() {
+  //   // console.log("ngAfterViewInit of App component")
+  // }
+  // ngAfterViewChecked() {
+  //   console.log('ngAfterViewChecked in app component')
+  // }
+  onDestroy() {
+    this.toDestroy = !this.toDestroy
   }
-  ngAfterViewChecked() {
-    console.log('ngAfterViewChecked in app component')
-  }
-
   onButtonClicked(inputEl: HTMLInputElement) {
     this.inputVal = inputEl.value;
   }

@@ -10,8 +10,10 @@
       <input type="text" #inputEl />
       <button (click)="onButtonClicked(inputEl)">Submit</button>
     </div>
-    <app-demo [message]="inputVal">
+    <app-demo [message]="inputVal" *ngIf="!toDestroy">
       <p #temp>This is a projected content {{inputVal}}</p>
     </app-demo>
+    <br><br>
+    <button (click)="onDestroy()">show/hide</button>
   </div>
 </div>

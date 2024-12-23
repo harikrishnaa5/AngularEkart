@@ -9,6 +9,7 @@ import {
   ElementRef, 
   Input, 
   OnChanges, 
+  OnDestroy, 
   OnInit, 
   SimpleChanges, 
   ViewChild } from '@angular/core';
@@ -18,7 +19,7 @@ import {
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.css'],
 })
-export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   @ViewChild('tempPara') tempPara: ElementRef
 
   @ContentChild('temp') temp: ElementRef
@@ -60,6 +61,9 @@ export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentIn
   ngAfterViewChecked() {
     console.log('ngAfterViewChecked')
     console.log(this.tempPara.nativeElement, "temppara")
+  }
+  ngOnDestroy() {
+    console.log('on destroying component')
   }
 
 }
