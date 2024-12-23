@@ -11,7 +11,7 @@
       <button (click)="onButtonClicked(inputEl)">Submit</button>
     </div>
     <app-demo [message]="inputVal">
-      <p #temp>This is a projected content</p>
+      <p #temp>This is a projected content {{inputVal}}</p>
     </app-demo>
   </div>
 </div>

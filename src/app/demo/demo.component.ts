@@ -1,11 +1,22 @@
-import { AfterContentInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { 
+  AfterContentChecked,
+  AfterContentInit, 
+  Component, 
+  ContentChild, 
+  DoCheck, 
+  ElementRef, 
+  Input, 
+  OnChanges, 
+  OnInit, 
+  SimpleChanges, 
+  ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.css'],
 })
-export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit {
+export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked {
   @ViewChild('tempPara') tempPara: ElementRef
 
   @ContentChild('temp') temp: ElementRef
@@ -36,4 +47,8 @@ export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentIn
     console.log('ngAfterContentInit')
     console.log("temp inside ngAfterContentInit: ",this.temp.nativeElement)
   }
+  ngAfterContentChecked() {
+    console.log('inside ngAfterContentChecked' )
+  }
+
 }
