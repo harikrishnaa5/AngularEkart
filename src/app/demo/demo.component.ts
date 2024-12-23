@@ -1,6 +1,7 @@
 import { 
   AfterContentChecked,
   AfterContentInit, 
+  AfterViewChecked, 
   AfterViewInit, 
   Component, 
   ContentChild, 
@@ -17,7 +18,7 @@ import {
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.css'],
 })
-export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit {
+export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   @ViewChild('tempPara') tempPara: ElementRef
 
   @ContentChild('temp') temp: ElementRef
@@ -49,11 +50,16 @@ export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentIn
     // console.log("temp inside ngAfterContentInit: ",this.temp.nativeElement)
   }
   ngAfterContentChecked() {
-    console.log('inside ngAfterContentChecked' )
-    console.log(this.tempPara?.nativeElement, "temp para ngAfterContentChecked")
+    // console.log('inside ngAfterContentChecked' )
+    // console.log(this.tempPara?.nativeElement, "temp para ngAfterContentChecked")
   }
   ngAfterViewInit() {
-    console.log(this.tempPara.nativeElement, "temp para ngAfterViewInit")
+    // console.log(this.tempPara.nativeElement, "temp para ngAfterViewInit")
+    console.log( "ngAfterViewInit")
+  }
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked')
+    console.log(this.tempPara.nativeElement, "temppara")
   }
 
 }
