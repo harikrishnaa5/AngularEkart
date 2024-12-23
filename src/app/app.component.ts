@@ -11,6 +11,10 @@ export class AppComponent {
   constructor() {
     console.log('This is the constructor of AppComponent');
   }
+
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit of App component")
+  }
   onButtonClicked(inputEl: HTMLInputElement) {
     this.inputVal = inputEl.value;
   }
