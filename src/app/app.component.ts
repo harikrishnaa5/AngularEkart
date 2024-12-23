@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-ekart';
-  inputVal: string = '';
+  inputVal: string[] = ['Hi'];
   constructor() {
     console.log('This is the constructor of AppComponent');
   }
   onButtonClicked(inputEl: HTMLInputElement) {
-    this.inputVal = inputEl.value;
+    this.inputVal.push(inputEl.value);
   }
 }
