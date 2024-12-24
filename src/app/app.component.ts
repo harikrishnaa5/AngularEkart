@@ -10,7 +10,7 @@ export class AppComponent {
   inputVal: string = '';
   toDestroy: boolean = false
   constructor() {
-    console.log('This is the constructor of AppComponent');
+    // console.log('This is the constructor of AppComponent');
   }
 
   // ngAfterViewInit() {
