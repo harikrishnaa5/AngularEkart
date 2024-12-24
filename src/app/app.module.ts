@@ -21,7 +21,13 @@ import { ChildComponent } from './parent/child/child.component';
 import { TestComponent } from './test/test.component';
 import { DemoComponent } from './demo/demo.component';
 import { SetBackground } from './CustomDirectives/SetBackground.directive';
-import { HighlightDirective } from './CustomDirectives/highlight.directive'
+import { HighlightDirective } from './CustomDirectives/highlight.directive';
+import { RendererDirective } from './CustomDirectives/renderer.directive';
+import { AppendChildDirective } from './CustomDirectives/append-child.directive';
+import { RendererComponent } from './renderer/renderer.component';
+import { SetAttributeDirective } from './CustomDirectives/set-attribute.directive';
+import { SetStyleDirective } from './CustomDirectives/set-style.directive';
+import { SetPropertyDirective } from './CustomDirectives/set-property.directive'
 
 @NgModule({
   declarations: [
@@ -45,6 +51,12 @@ import { HighlightDirective } from './CustomDirectives/highlight.directive'
     DemoComponent,
     SetBackground,
     HighlightDirective,
+    RendererDirective,
+    AppendChildDirective,
+    RendererComponent,
+    SetAttributeDirective,
+    SetStyleDirective,
+    SetPropertyDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
