@@ -42,7 +42,7 @@ import { SetBackground } from './CustomDirectives/SetBackground.directive';
     ChildComponent,
     TestComponent,
     DemoComponent,
-    SetBackground
+    SetBackground,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
