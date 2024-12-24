@@ -1,4 +1,5 @@
 .product-container {
+  position: relative; 
   flex: 1 1 1 15rem;
   width: 310px;
   border: 1px solid #ddd;
@@ -9,11 +10,17 @@
   padding: 2rem 1.3rem;
   margin-top: 1.3rem;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden; 
+  pointer-events: auto;
 }
 
-.product-container:hover {
+.product-container * {
+  pointer-events: none;
+}
+.highlight-product {
   transform: scale(1.05);
-  cursor: pointer;
+  
 }
 img {
   object-fit: cover;
