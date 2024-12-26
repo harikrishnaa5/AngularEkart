@@ -2,7 +2,7 @@
   <div class="add-to-wishlist">
     <i class="fa-solid fa-heart"></i>
   </div>
-  <img [src]="product.imageURL" alt="product" [appDisableProduct]="!product.is_in_inventory"/>
+  <img [src]="product.imageURL" alt="product" />
   <p class="product-name">{{ product.name }}</p>
   <p>{{ product.gender }} . {{ product.brand }} . {{ product.category }}</p>
   <span class="price-wrap"

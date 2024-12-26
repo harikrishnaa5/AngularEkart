@@ -31,7 +31,9 @@ import { SetPropertyDirective } from './CustomDirectives/set-property.directive'
 import { AppHoverDirective } from './CustomDirectives/app-hover.directive';
 import { Demo2Component } from './demo2/demo2.component';
 import { SampleDirectiveDirective } from './CustomDirectives/sample-directive.directive';
-import { DisableProductDirective } from './CustomDirectives/disable-product.directive'
+import { DisableProductDirective } from './CustomDirectives/disable-product.directive';
+import { Demo3Component } from './demo3/demo3.component';
+import { ClassDirective } from './CustomDirectives/class.directive'
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { DisableProductDirective } from './CustomDirectives/disable-product.dire
     Demo2Component,
     SampleDirectiveDirective,
     DisableProductDirective,
+    Demo3Component,
+    ClassDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
