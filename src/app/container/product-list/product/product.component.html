@@ -1,8 +1,8 @@
-<div class="product-container" appHighlight>
+<div class="product-container" appHighlight [appDisableProduct]="!product.is_in_inventory">
   <div class="add-to-wishlist">
     <i class="fa-solid fa-heart"></i>
   </div>
-  <img [src]="product.imageURL" alt="product" />
+  <img [src]="product.imageURL" alt="product" [appDisableProduct]="!product.is_in_inventory"/>
   <p class="product-name">{{ product.name }}</p>
   <p>{{ product.gender }} . {{ product.brand }} . {{ product.category }}</p>
   <span class="price-wrap"

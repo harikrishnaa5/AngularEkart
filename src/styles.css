@@ -9,3 +9,8 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.disable-out-of-stock {
+  background-color: "#28282B";
+  opacity: 0.5;
+}
