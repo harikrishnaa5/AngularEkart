@@ -28,7 +28,9 @@ import { RendererComponent } from './renderer/renderer.component';
 import { SetAttributeDirective } from './CustomDirectives/set-attribute.directive';
 import { SetStyleDirective } from './CustomDirectives/set-style.directive';
 import { SetPropertyDirective } from './CustomDirectives/set-property.directive';
-import { AppHoverDirective } from './CustomDirectives/app-hover.directive'
+import { AppHoverDirective } from './CustomDirectives/app-hover.directive';
+import { Demo2Component } from './demo2/demo2.component';
+import { SampleDirectiveDirective } from './CustomDirectives/sample-directive.directive'
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { AppHoverDirective } from './CustomDirectives/app-hover.directive'
     SetStyleDirective,
     SetPropertyDirective,
     AppHoverDirective,
+    Demo2Component,
+    SampleDirectiveDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

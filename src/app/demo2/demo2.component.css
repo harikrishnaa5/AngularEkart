@@ -1,0 +1,17 @@
+.demo2 {
+    height: 100vh;
+    /* display: flex; */
+    padding-left: 40% ;
+    padding-top: 20%;
+}
+input{
+    width: 300px;
+    font-size: 18px;
+    padding: 10px 5px;
+}
+button{
+    padding: 10px 5px;
+    font-size: 18px;
+    width: 50px;
+    cursor: pointer;
+}

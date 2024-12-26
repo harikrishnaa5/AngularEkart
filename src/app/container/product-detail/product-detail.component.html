@@ -11,9 +11,9 @@
             <h2>{{product.name}}</h2>
         </div>
         <div class="ekart-product-detail-gbc">
-            <span setBackground>{{product.gender}}</span>
-            <span setBackground>{{product.brand}}</span>
-            <span setBackground>{{product.category}}</span>
+            <span [setBackground]="{textColor : 'white', backgroundColor: '#36454F'}">{{product.gender}}</span>
+            <span [setBackground]="{textColor: 'black', backgroundColor: 'yellow'}">{{product.brand}}</span>
+            <span [setBackground]="{textColor: 'black', backgroundColor: 'red'}">{{product.category}}</span>
         </div>
         <div class="ekart-product-detail-price">
             <p>
@@ -28,7 +28,7 @@
                 <h4>Available Size</h4>
             </div>
             <div style="margin-top: 20px">
-                <span class="ekart-product-detail-available-size" setBackground  *ngFor="let size of product.size">{{size}}</span>
+                <span class="ekart-product-detail-available-size"  *ngFor="let size of product.size">{{size}}</span>
             </div>                
         </div>
 
